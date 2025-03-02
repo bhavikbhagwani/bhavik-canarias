@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './PaymentSection.css'
-import PaymentMethods from './paymentMethods/paymentMethods';
-import PaymentCardForm from './paymentCardForm/PaymentCardForm';
+import PaymentMethods from './paymentMethods/PaymentMethods';
 import { fareTypes } from '../../../../utils/fareTypes';
 import { lineSpinner } from 'ldrs'
 import toast from 'react-hot-toast';

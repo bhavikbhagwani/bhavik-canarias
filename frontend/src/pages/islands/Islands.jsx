@@ -3,7 +3,6 @@ import './Islands.css'
 import NavBar from '../home/navbar/NavBar'
 import { islandsData, islandsIntro } from '../../utils/islandsData'
 import Footer from '../../components/footer/Footer'
-import { FlightsContext } from '../../context/FlightsContext'
 import { ScrollTop } from 'primereact/scrolltop'
 
 const Islands = () => {

@@ -3,12 +3,11 @@ import './Payment.css'
 import { getDateFormatFromDate, getFlightDuration, getTimeFromDate } from '../../../utils/timeFunctions';
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { fareTypes } from '../../../utils/fareTypes';
-import FareModal from './fareModal/fareModal';
+import FareModal from './fareModal/FareModal';
 import PaymentSection from './paymentSection/PaymentSection';
 import useCreateBooking from '../../../hooks/useCreateBooking';
 import { useNavigate } from 'react-router-dom';
 import { airportMappings } from '../../../utils/airportMappings';
-import { useAuthContext } from '../../../context/AuthContext';
 
 
 const Payment = ({onBack, flight, fareType, passengerData, contactDetails, extraLuggageList, totalPrice}) => {
