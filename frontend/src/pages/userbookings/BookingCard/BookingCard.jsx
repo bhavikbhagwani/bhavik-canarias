@@ -3,9 +3,8 @@ import './BookingCard.css'
 import { getFlightDuration, getTimeFromDate } from '../../../utils/timeFunctions'
 import { airportMappings } from '../../../utils/airportMappings'
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import FareModal from '../../../components/booking/payment/fareModal/fareModal';
+import FareModal from '../../../components/booking/payment/fareModal/FareModal';
 import { fareTypes } from '../../../utils/fareTypes';
-import { FaRegCopy } from "react-icons/fa";
 
 import { IoIosArrowDropdown } from "react-icons/io";
 import { IoIosArrowDropup } from "react-icons/io";
