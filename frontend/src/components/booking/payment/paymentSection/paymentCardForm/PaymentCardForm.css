@@ -1,0 +1,46 @@
+.card-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 16px;
+    border: 1px solid rgba(0, 80, 158, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+  .form-row-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 20px;
+  }
+
+  
+  .form-column-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .input-field-card {
+    width: 95%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+    caret-color: #ff9800;
+    padding-left: 8px;
+    margin-bottom: 12px;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .input-field-card:focus {
+    border-color: #00509E;
+  }
+  

@@ -1,0 +1,41 @@
+.passenger_info_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.flight_info_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.flight_info_heading h1{
+    font-size: 2rem;
+    color: #333; /* Dark color for the heading */
+}
+
+.flight_info_heading p {
+    font-size: 1rem; /* Adjust font size for the paragraph */
+    color: #434343; /* Lighter color for the paragraph */
+}
+
+
+.passenger_cards_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 650px){
+    .passenger_info_container{
+        width: 90%;
+    }
+}

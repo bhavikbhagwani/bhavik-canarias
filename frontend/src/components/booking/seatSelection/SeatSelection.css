@@ -1,0 +1,195 @@
+.seat_selection_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+
+.back_button {
+    --color: #87CEEB;
+    font-family: inherit;
+    display: inline-block;
+    width: 230px;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 4s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    transition: background-color 0.8s, color 0.8s;
+    margin-top: 20px;
+  }
+  
+.back_button:hover {
+    background-color: var(--color); /* Change background color on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+.back_button:active {
+    background-color: #6db0d4; /* Slightly darker color for active state */
+    color: #fff;
+}
+  
+.seat_selection_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.seat_selection_heading h1{
+    font-size: 2rem;
+    color: #333; /* Dark color for the heading */
+}
+
+.seat_selection_heading p {
+    font-size: 1rem; /* Adjust font size for the paragraph */
+    color: #434343; /* Lighter color for the paragraph */
+}
+
+.seat_selection_content {
+    display: flex;
+    gap: 50px;
+}
+
+.passenger_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 600px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.passenger_list h2{
+    font-size: 2rem;
+}
+
+.passenger_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #87CEEB;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+
+.selected_passenger {
+    border: 3px solid #0071c2; /* Highlight selected passenger */
+    font-weight: bold;
+}
+
+.assigned_seat {
+    font-weight: bold;
+    color: #0071c2;
+}
+
+
+.plane_container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.seat_row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .row_label {
+    margin-right: 10px;
+    font-weight: bold;
+    width: 20px;
+    text-align: right; /* Aligns numbers properly */
+    display: inline-block;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .seat:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .seat.selected {
+    background-color: rgb(1, 197, 1);
+    color: white;
+  }
+  
+  .seat.booked {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+
+@media (max-width: 1250px){
+    .seat_selection_content{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media (max-width: 800px){
+
+    .passenger_list{
+        align-items: center;
+    }
+
+    .passenger_item{
+        width: 60%;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 450px){
+
+    .passenger_list{
+        width: 500px;
+    }
+
+    .plane_container{
+        margin-right: 20px;
+    }
+
+    .seat{
+        width: 35px;
+        height: 35px;
+    }
+}
+@media (max-width: 350px){
+
+   
+    .passenger_list{
+        width: 400px;
+    }
+
+    .seat{
+        width: 32px;
+        height: 32px;
+        margin: 3px;
+    }
+}

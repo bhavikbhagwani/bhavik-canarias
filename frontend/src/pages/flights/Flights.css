@@ -1,0 +1,275 @@
+.flights_container {
+    background-image: url('/bg image bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Adjusted to 100vh */
+    overflow: hidden;
+}
+
+.flights_page_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flights_fetched_container{
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    display: flex;  /* Flexbox for the layout */
+    flex-direction: column;
+    align-items: center;  /* Vertically align the inputs */
+    justify-content: center;
+}
+
+.flights_fetched_summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 80%;
+}
+
+
+.no_flights_found, .search_expired {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px dashed #87CEEB; /* Dashed border for a subtle effect */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    color: #333;
+    font-size: 18px;
+    width: 80%;
+  }
+  
+  .no_flights_found h3, .search_expired h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+  }
+
+
+.flight_type_options {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+
+}
+.flight_type_heading{
+    font-size: 2rem;
+}
+
+.flight_type_cards {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.flight_type_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px; /* Ensures all cards are of equal height */
+}
+
+.flight_type_card_content {
+    flex-grow: 1; /* Makes the content grow to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    gap: 10px; /* Space between elements */
+}
+
+
+
+.flight_type_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.flight_type_card.selected {
+    border-color: #87CEEB;
+    background-color: #f0f8ff;
+    font-weight: bold;
+}
+
+.flight_type_card h3{
+    margin: 10px 0 5px;
+    font-size: 1.3em;
+}
+
+.flight_type_card .fare_descr {
+    color: #555;
+    font-size: 1em;
+    margin: 0;
+}
+
+.fare_price {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-top: 5px;
+
+}
+  
+
+
+.continue_button {
+    --color: #87CEEB;
+    font-family: inherit;
+    display: inline-block;
+    width: 70%;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 4s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    transition: background-color 0.8s, color 0.8s;
+    margin-top: 20px;
+  }
+  
+.continue_button:hover {
+    background-color: var(--color); /* Change background color on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+.continue_button:active {
+    background-color: #6db0d4; /* Slightly darker color for active state */
+    color: #fff;
+}
+  
+
+
+
+
+.new_search_button {
+    font: inherit;
+    background-color: #EEEEEE;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #ffffff;
+    box-shadow: 
+        inset 0 0.0625em 0 0 #ffffff,  /* light white inner shadow */
+        0 0.0625em 0 0 #e1e1e1,  /* light gray shadow around the button */
+        0 0.125em 0 0 #c2c2c2,  /* subtle darker gray */
+        0 0.25em 0 0 #b3b3b3,  /* medium gray shadow */
+        0 0.3125em 0 0 #9e9e9e,  /* darker gray */
+        0 0.375em 0 0 #8f8f8f,  /* darker shadow for more depth */
+        0 0.425em 0 0 #7f7f7f,  /* even darker shadow */
+        0 0.425em 0.5em 0 #6f6f6f; /* dark outermost shadow */
+    transition: 0.15s ease;
+    cursor: pointer;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  
+  .new_search_button:active {
+    translate: 0 0.225em;
+    box-shadow: 
+        inset 0 0.03em 0 0 #ffffff,  /* light white inner shadow */
+        0 0.03em 0 0 #e1e1e1,  /* light gray shadow around the button */
+        0 0.0625em 0 0 #c2c2c2,  /* subtle darker gray */
+        0 0.125em 0 0 #b3b3b3,  /* medium gray shadow */
+        0 0.125em 0 0 #9e9e9e,  /* darker gray */
+        0 0.2em 0 0 #8f8f8f,  /* darker shadow for more depth */
+        0 0.225em 0 0 #7f7f7f,  /* even darker shadow */
+        0 0.225em 0.375em 0 #6f6f6f; /* dark outermost shadow */
+  }
+
+
+@media (max-width: 1000px){
+    .flights_fetched_container{
+        width: 95%;
+    }
+
+    .flight_type_cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        
+    }
+}
+
+
+@media (max-width: 700px){
+
+
+    
+    .flights_fetched_summary{
+        flex-direction: column;
+        gap: 20px;
+    }
+  }
+
+
+@media (max-width: 500px){
+
+
+    
+    .no_flights_found, .search_expired{
+        width: 100%;
+    }
+
+    .no_flights_found h3, .search_expired h3{
+        font-size: 20px;
+    }
+
+    .flights_fetched_summary{
+        width: 100%;
+    }
+
+    .flight_type_cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        place-items: center;
+    }
+
+    .flight_type_card{
+        width: 90%;
+    }
+  }

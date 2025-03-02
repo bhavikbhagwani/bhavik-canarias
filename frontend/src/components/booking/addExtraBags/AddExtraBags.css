@@ -1,0 +1,257 @@
+.add_extra_bags_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.add_extra_bags_container_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.add_extra_bags_container_heading h1{
+    font-size: 2rem;
+    color: #333; /* Dark color for the heading */
+}
+
+.add_extra_bags_container_heading p {
+    font-size: 1rem; /* Adjust font size for the paragraph */
+    color: #434343; /* Lighter color for the paragraph */
+}
+
+
+  
+  .add_extra_bags_container_heading {
+    text-align: center;
+  }
+  
+  .extra_bags_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .extra_bags_section_first_part{
+    display: flex;
+    gap: 50px;
+    width: 70%;
+  }
+  
+  .extra_bag_item {
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .extra_bag_item h2{
+    min-height: 60px;
+  }
+
+  .extra_bags_section_second_part{
+    display: flex;
+    justify-content: center;
+  }
+
+  .extra_bag_item_both{
+    width: 100%;
+  }
+  
+  .luggage_image {
+    max-width: 250px;
+    height: 400px;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+
+  .luggage_image_both{
+   height: 400px;
+   width: 500px;
+   margin: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .bag_controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.8s, color 0.8s;
+    border-radius: 12px;
+  }
+
+  .btn:hover{
+    background-color: #a4a4a4;
+  }
+  
+  .bag_count {
+    margin: 0 10px;
+    font-size: 25px;
+  }
+  
+  .bag_price {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    background-color: #ffcc00; /* Highlight the price */
+    font-size: 20px;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .add_extra_bags_summary {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add_extra_bags_summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.summary_card {
+    padding: 15px;
+    margin: 0 auto; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #333;
+}
+
+.summary_item:last-child {
+    border-bottom: none;
+}
+
+.summary_label {
+    font-weight: 600;
+    color: #555;
+    
+}
+
+.summary_value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px){
+  .extra_bags_section_first_part{
+    width: 90%;
+  }
+}
+
+@media (max-width: 956px){
+  .extra_bags_section_first_part{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extra_bag_item{
+    width: unset;
+  }
+}
+
+@media (max-width: 700px){
+
+  .luggage_image_both{
+    height: 250px;
+    width: auto;
+    margin: 10px 0;
+     border-radius: 10px;
+   }
+}
+@media (max-width: 500px){
+
+  .luggage_image_both{
+    height: 150px;
+    
+   }
+
+   .add_extra_bags_summary {
+    width: 110%;
+  }
+}
+
+
+
+
+@media (max-width: 700px){
+  .summary_label {
+    flex: 1 1 50%; /* Allow the label to take up 50% of the width */
+    margin-right: 10px; /* Add some spacing between label and value */
+    white-space: normal; /* Allow text wrapping */
+    word-wrap: break-word; /* Break words to avoid overflow */
+}
+
+.summary_value {
+  flex: 1 1 50%; /* Allow the value to take up 50% of the width */
+  word-wrap: break-word; /* Ensure value text wraps if needed */
+  }
+
+  .summary_item{
+    align-items: center;
+  }
+}
+
+
+
+/* For smaller screens, adjust font size and wrapping */
+@media (max-width: 500px) {
+
+  .summary_card{
+    padding: 5px;
+  }
+  .summary_item {
+      font-size: 16px; /* Reduce font size on small screens */
+      align-items: center;
+      
+  }
+
+  .summary_label {
+      font-size: 14px; /* Smaller font size for labels */
+      flex: 1 1 100%; /* Make labels take up the full width on small screens */
+      margin-right: 0; /* Remove margin */
+  }
+
+  .summary_value {
+      font-size: 16px; /* Slightly smaller value font size */
+      flex: 1 1 100%; /* Make values take up the full width on small screens */
+      word-break: break-word;
+  }
+}
+
+  

@@ -1,0 +1,98 @@
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001; /* Ensure modal is interactive */
+    pointer-events: auto; /* Allow interaction inside the modal */
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal_content h2{
+    font-size: 24px;
+}
+
+.modal_content h2 span{
+    color: #00509E;
+}
+
+.close_button {
+    --color: #87CEEB;
+    font-family: inherit;
+    display: inline-block;
+    width: 70%;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 4s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    transition: background-color 0.8s, color 0.8s;
+    margin-top: 20px;
+  }
+  
+.close_button:hover {
+    background-color: var(--color); /* Change background color on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+.close_button:active {
+    background-color: #6db0d4; /* Slightly darker color for active state */
+    color: #fff;
+}
+
+.cancel_booking_input{
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #727272;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 80%;
+}
+
+.cancel_booking_input:focus{
+    border-color: #00509E;
+}
+
+.br_input_error{
+    color: #00509E;
+    font-weight: bold;
+}

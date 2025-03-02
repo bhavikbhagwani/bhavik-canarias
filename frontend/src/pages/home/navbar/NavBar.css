@@ -1,0 +1,133 @@
+
+
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 120px;
+    backdrop-filter: blur(10px);
+
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure it's on top of other content */    
+}
+
+.nav_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.logo_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.logo_container img{
+    width: 100px;
+    
+}
+
+.nav_links_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 5px;
+}
+
+
+.nav_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #87CEEB;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+    width: 150px;
+    padding: 10px;
+    
+}
+
+.nav_link_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #00509E;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+    width: 100px;
+}
+
+.nav_link::before, .nav_link_active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #00509E;
+    transition: 0.5s ease;
+}
+
+.nav_link:hover::before,.nav_link_active:hover::before{
+    width: 100%;
+}
+
+.nav_link::after, .nav_link_active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #00509E;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+
+.open_icon{
+    display: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1300px){
+    .nav_links_container{
+        gap: 20px;
+    }
+}
+@media (max-width: 1175px){
+    .nav_links_container{
+        gap: 10px;
+    }
+}
+@media (max-width: 1110px){
+    .nav_links_container{
+        display: none;
+    }
+
+    .open_icon{
+        display: block;
+    }
+}

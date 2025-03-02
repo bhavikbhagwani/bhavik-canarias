@@ -1,0 +1,88 @@
+/* General container for the Passenger Info section */
+.passenger_info_card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    border: 1px solid black;
+  }
+  
+  /* Styling for the heading */
+  .passenger_info_container h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Form container */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  /* Form row for first and last name inputs */
+  .form-row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  /* Form group for labels and inputs */
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Labels styling */
+  .form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Input fields styling */
+  .form-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #727272;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 80%;
+  }
+  
+  .form-group input:focus {
+    border-color: #00509E;
+  }
+  
+  .error-message{
+    color: red;
+    margin-top: 10px;
+  }
+  
+
+@media (max-width:  1000px){
+  .form-row {
+    flex-direction: column;
+  }
+
+
+  .form-group input{
+    width: 100%;
+  }
+}
+@media (max-width:  500px){
+  .passenger_info_card{
+    width: 110%;
+  }
+}

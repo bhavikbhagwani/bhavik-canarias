@@ -1,0 +1,113 @@
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light theme */
+    background-color: #546c74; /* Light theme */
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar.closed {
+    transform: translateX(100%);
+  }
+  
+  /* Sidebar content */
+  .sidebar_content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Close button */
+  .close_btn {
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease;
+  }
+  
+  .close_btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Logo */
+  .sidebar_logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar_logo img {
+    width: 140px;
+    height: auto;
+  }
+  
+  /* Navigation links */
+  .sidebar_links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sidebar_links a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #87CEEB; /* Blue shade */
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .nav_link_sidebar{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #87CEEB; /* Blue shade */
+    padding: 10px 15px;
+    border-radius: 6px;
+    
+}
+
+
+
+.nav_link_sidebar::before, .nav_link_sidebar::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #00509E;
+    transition: 0.5s ease;
+}
+
+.nav_link_sidebar:hover::before,.nav_link_sidebar:hover::before{
+    width: 100%;
+}
+
+.nav_link_sidebar::after, .nav_link_sidebar::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #00509E;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+  
+  

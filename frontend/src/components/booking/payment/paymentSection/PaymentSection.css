@@ -1,0 +1,139 @@
+.payment_section_container{
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.payment_section_container h3{
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+.payment_methods {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment_methods label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment_form_container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.payment_form h4 {
+    margin-bottom: 10px;
+}
+
+.gen_button{
+    width: 100%;
+  height: 45px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2.5px solid #cbccce;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  font-weight: bold;
+}
+
+.gen_button:hover {
+    background-color: hsl(0, 0%, 85%);
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+.gen_button:active {
+    transform: scale(0.95);
+  }
+
+.payment_form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card_details {
+    display: flex;
+    gap: 10px;
+}
+
+.payment_summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.payment_summary h4 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.summary_item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+}
+.paypal_button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffc439;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.paypal_button:hover {
+    background-color: #e0a800;
+}
+
+.total_price {
+    font-size: 1.4rem;  /* Increase font size */
+    font-weight: bold;  /* Make it bold */
+    margin-top: 10px;  /* Add spacing above */
+    padding: 10px 0;  /* Add some padding */
+}
+.total_price .summary_value, .total_price .summary_item {
+    font-size: 1.6rem;  /* Even larger font for price */
+}
+
+@media (max-width: 500px){
+
+    .payment_section_container{
+        width: 115%;
+    }
+}

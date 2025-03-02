@@ -1,0 +1,119 @@
+.user_bookings_page_container{
+    background-image: url('/bg image bc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Adjusted to 100vh */
+    overflow: hidden;
+}
+
+.user_bookings_page_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user_bookings_container{
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    display: flex;  /* Flexbox for the layout */
+    flex-direction: column;
+    align-items: center;  /* Vertically align the inputs */
+    justify-content: center;
+}
+
+.user_bookings_container h1{
+    color: #00509E;
+    margin-bottom: 10px;
+}
+
+.user_bookings{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.no_bookings_found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px dashed #87CEEB; /* Dashed border for a subtle effect */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    color: #333;
+    font-size: 18px;
+    width: 80%;
+}
+
+.no_bookings_found h3{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.book_flights_button {
+    font: inherit;
+    background-color: #EEEEEE;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #ffffff;
+    box-shadow: 
+        inset 0 0.0625em 0 0 #ffffff,  /* light white inner shadow */
+        0 0.0625em 0 0 #e1e1e1,  /* light gray shadow around the button */
+        0 0.125em 0 0 #c2c2c2,  /* subtle darker gray */
+        0 0.25em 0 0 #b3b3b3,  /* medium gray shadow */
+        0 0.3125em 0 0 #9e9e9e,  /* darker gray */
+        0 0.375em 0 0 #8f8f8f,  /* darker shadow for more depth */
+        0 0.425em 0 0 #7f7f7f,  /* even darker shadow */
+        0 0.425em 0.5em 0 #6f6f6f; /* dark outermost shadow */
+    transition: 0.15s ease;
+    cursor: pointer;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  
+  .book_flights_button:active {
+    translate: 0 0.225em;
+    box-shadow: 
+        inset 0 0.03em 0 0 #ffffff,  /* light white inner shadow */
+        0 0.03em 0 0 #e1e1e1,  /* light gray shadow around the button */
+        0 0.0625em 0 0 #c2c2c2,  /* subtle darker gray */
+        0 0.125em 0 0 #b3b3b3,  /* medium gray shadow */
+        0 0.125em 0 0 #9e9e9e,  /* darker gray */
+        0 0.2em 0 0 #8f8f8f,  /* darker shadow for more depth */
+        0 0.225em 0 0 #7f7f7f,  /* even darker shadow */
+        0 0.225em 0.375em 0 #6f6f6f; /* dark outermost shadow */
+  }
+
+
+  @media (max-width: 500px){
+
+    .user_bookings_container{
+        width: 95%;
+    }
+    
+    .no_bookings_found{
+        width: 100%;
+    }
+
+    .no_bookings_found h3{
+        font-size: 20px;
+    }
+  }
