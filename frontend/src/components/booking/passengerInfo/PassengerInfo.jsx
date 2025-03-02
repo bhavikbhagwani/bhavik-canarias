@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './PassengerInfo.css';
-import PassengerInfoCard from './passengerInfoCard/passengerInfoCard';
+import PassengerInfoCard from './passengerInfoCard/PassengerInfoCard';
 import PassengerContactCard from './passengerContactCard/PassengerContactCard';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
