@@ -7,7 +7,7 @@ import PassengerInfo from '../../components/booking/passengerInfo/PassengerInfo'
 import { FlightsContext } from '../../context/FlightsContext';
 import { Link, useNavigate } from 'react-router-dom';
 import SeatSelection from '../../components/booking/seatSelection/SeatSelection';
-import AddExtraBags from '../../components/booking/addExtraBags/addExtraBags';
+import AddExtraBags from '../../components/booking/addExtraBags/AddExtraBags';
 import Payment from '../../components/booking/payment/Payment';
 import { MdError } from "react-icons/md";
 import { ScrollTop } from 'primereact/scrolltop';
