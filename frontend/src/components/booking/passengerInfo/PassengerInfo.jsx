@@ -17,11 +17,11 @@ const PassengerInfo = ({ onNext, numPassengers, passengerData, setPassengerData,
     const [contactErrors, setContactErrors] = useState({ email: "", phone: "" });
 
     const validateEmail = (email) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); // Basic email validation
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
 
     const validatePhone = (phone) => {
-        return /^\+?[\d\s]{10,15}$/.test(phone); 
+        return /^\+?\d{10,15}$/.test(phone.replace(/\s+/g, ''));
     };
     
     
@@ -69,8 +69,6 @@ const PassengerInfo = ({ onNext, numPassengers, passengerData, setPassengerData,
             // Proceed only if there are no errors
             if (!newErrors.email && !newErrors.phone) {
 
-                console.log(passengerData);
-                console.log(contactDetails);
                 onNext();
             }
 

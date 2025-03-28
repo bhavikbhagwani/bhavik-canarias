@@ -54,8 +54,13 @@ const Home = () => {
         <div className='home_container_first_part_inner'>
           <div className='info_container'>
                 <div className='slogan'>
-                  <h1>Connecting Every Canary Island with Ease</h1>
-                  <h2>Fly <span>Direct</span>, Fly <span>Fast</span>, Fly with <span>Zero Hassle</span></h2>
+                  <div>
+                    <h1>Connecting Every Canary Island with Ease</h1>
+                    <h2>Fly <span>Direct</span>, Fly <span>Fast</span>, Fly with <span>Zero Hassle</span></h2>
+                  </div>
+                  <div className='flight_notice'>
+                    <h2>Flights for April <span>OUT NOW</span></h2>
+                  </div>
                 </div>
           </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './AddExtraBags.css'
+import toast from 'react-hot-toast'
 
 const AddExtraBags = ({onNext, onBack, handLuggageCount, setHandLuggageCount, checkInLuggageCount, setCheckInLuggageCount, bothLuggageCount, setBothLuggageCount}) => {
 
@@ -16,9 +17,15 @@ const AddExtraBags = ({onNext, onBack, handLuggageCount, setHandLuggageCount, ch
 
   // Hand luggage increase/decrease functions
   const handleHandLuggageIncrease = () => {
-    if (bothLuggageCount === 0 && handLuggageCount < 2) {
-        setHandLuggageCount(handLuggageCount + 1);
+    if (bothLuggageCount > 0) {
+        toast.error("Cannot add hand luggage when 'Both' option is selected.");
+        return;
     }
+    if (handLuggageCount >= 2) {
+    toast.error("You cannot have more than 2 hand luggage.");
+    return;
+    }
+    setHandLuggageCount(handLuggageCount + 1);
   };
 
   const handleHandLuggageDecrease = () => {
@@ -29,9 +36,15 @@ const AddExtraBags = ({onNext, onBack, handLuggageCount, setHandLuggageCount, ch
 
  // Check-in luggage increase/decrease functions
  const handleCheckInLuggageIncrease = () => {
-    if (bothLuggageCount === 0 && checkInLuggageCount < 2) {
-        setCheckInLuggageCount(checkInLuggageCount + 1);
+    if (bothLuggageCount > 0) {
+        toast.error("Cannot add check-in luggage when 'Both' option is selected.");
+        return;
     }
+    if (checkInLuggageCount >= 2) {
+    toast.error("You cannot have more than 2 check-in luggage.");
+    return;
+    }
+    setCheckInLuggageCount(checkInLuggageCount + 1);
   };
 
   const handleCheckInLuggageDecrease = () => {
@@ -42,11 +55,13 @@ const AddExtraBags = ({onNext, onBack, handLuggageCount, setHandLuggageCount, ch
 
   // Combined luggage increase/decrease functions
   const handleBothLuggageIncrease = () => {
-    if (bothLuggageCount < 2) {
-        setBothLuggageCount(bothLuggageCount + 1);
-        setHandLuggageCount(0);
-        setCheckInLuggageCount(0);
+    if (bothLuggageCount >= 2) {
+        toast.error("You cannot have more than 2 'Both' luggage.");
+        return;
     }
+    setBothLuggageCount(bothLuggageCount + 1);
+    setHandLuggageCount(0);
+    setCheckInLuggageCount(0);
   };
 
   const handleBothLuggageDecrease = () => {

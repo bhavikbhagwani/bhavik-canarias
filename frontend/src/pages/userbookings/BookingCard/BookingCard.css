@@ -101,6 +101,8 @@
   color: #00509E;
 }
 
+
+
   
 
 .booking_fetched_summary_container{
@@ -117,6 +119,48 @@
     padding: 10px;
     border-radius: 12px;
    
+}
+
+.summary_section {
+  margin-bottom: 20px;
+}
+
+.summary_section h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.summary_card {
+  padding: 15px;
+  margin: 0 auto; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #333;
+}
+
+.summary_item:last-child {
+  border-bottom: none;
+}
+
+.summary_label {
+  font-weight: 600;
+  color: #555;
+  
+}
+
+.summary_value {
+  font-size: 18px;
+  font-weight: bold;
 }
 
   
@@ -205,4 +249,30 @@
     width: 100%;
   }
 
+}
+
+
+/* For smaller screens, adjust font size and wrapping */
+@media (max-width: 500px) {
+
+  .summary_card{
+    padding: 5px;
+  }
+  .summary_item {
+      font-size: 16px; /* Reduce font size on small screens */
+      align-items: center;
+      
+  }
+
+  .summary_label {
+      font-size: 14px; /* Smaller font size for labels */
+      flex: 1 1 100%; /* Make labels take up the full width on small screens */
+      margin-right: 0; /* Remove margin */
+  }
+
+  .summary_value {
+      font-size: 16px; /* Slightly smaller value font size */
+      flex: 1 1 100%; /* Make values take up the full width on small screens */
+      word-break: break-word;
+  }
 }

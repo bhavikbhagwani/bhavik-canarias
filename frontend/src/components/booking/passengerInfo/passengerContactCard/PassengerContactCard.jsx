@@ -33,7 +33,7 @@ const PassengerContactCard = ({ contactDetails, setContactDetails, contactErrors
             {contactErrors.email && <span className="error-message">{contactErrors.email}</span>}
           </div>
           <div className="form-group-contact">
-            <label htmlFor='phone'>Phone Number (including country code)</label>
+            <label htmlFor='phone'>Phone Number (including country code e.g. +34...)</label>
             <input
               type="text"
               id='phone'
